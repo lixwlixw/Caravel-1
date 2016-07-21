@@ -1,6 +1,5 @@
 FROM registry.dataos.io/library/ubuntu:14.04
-RUN sed -i "s/http:\/\/archive.ubuntu.com/http:\/\/mirrors.aliyun.com/g" /etc/apt/sources.list && \
-    apt-get update -y  && \
+RUN apt-get update -y  && \
     apt-get install -y build-essential libssl-dev libffi-dev python-dev python-pip libmysqlclient-dev && \
     apt-get build-dep -y psycopg2 && \
     cd && mkdir .pip/ && echo "[global]" >  .pip/pip.conf && \
