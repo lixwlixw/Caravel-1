@@ -1,4 +1,4 @@
-FROM library/ubuntu:14.04
+FROM registry.dataos.io/library/ubuntu:latest
 
 # Setup
 RUN sed -i "s/http:\/\/archive.ubuntu.com/http:\/\/mirrors.aliyun.com/g" /etc/apt/sources.list && \
@@ -35,4 +35,4 @@ WORKDIR /home/caravel
 ADD . /home/caravel
 RUN chmod +x /home/caravel/start.sh
 
-CMD /home/caravel/start.sh
+CMD ["/home/caravel/start.sh"]
