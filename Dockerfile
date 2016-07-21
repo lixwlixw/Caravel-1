@@ -1,4 +1,4 @@
-FROM library/ubuntu:14.04
+FROM registry.dataos.io/library/ubuntu:14.04
 
 # Setup
 RUN sed -i "s/http:\/\/archive.ubuntu.com/http:\/\/mirrors.aliyun.com/g" /etc/apt/sources.list && \
