@@ -3,9 +3,9 @@ RUN sed -i "s/http:\/\/archive.ubuntu.com/http:\/\/centos.bitcomm.cn/g" /etc/apt
     apt-get update -y  && \
     apt-get install -y build-essential libssl-dev libffi-dev python-dev python-pip libmysqlclient-dev && \
     apt-get build-dep -y psycopg2 && \
-    cd && mkdir .pip/ && echo "[global]" >  .pip/pip.conf && \
-    echo "trusted-host =  http://pypi.v2ex.com" >> .pip/pip.conf && \
-    echo "index-url = http://pypi.v2ex.com/simple/" >> .pip/pip.conf && \
+#    cd && mkdir .pip/ && echo "[global]" >  .pip/pip.conf && \
+#    echo "trusted-host =  http://pypi.v2ex.com" >> .pip/pip.conf && \
+#    echo "index-url = http://pypi.v2ex.com/simple/" >> .pip/pip.conf && \
     pip install psycopg2==2.6.1 && \
     pip install sqlalchemy-redshift==0.5.0 && \
     pip install caravel==0.9.0 && \
